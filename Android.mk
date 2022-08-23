@@ -20,7 +20,7 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := webview-hawaii
+LOCAL_MODULE := webview
 LOCAL_MODULE_CLASS := APPS
 LOCAL_PRODUCT_MODULE := true
 LOCAL_MULTILIB := both
@@ -34,7 +34,5 @@ my_src_arch := $(call get-prebuilt-src-arch,$(LOCAL_MODULE_TARGET_ARCH))
 LOCAL_SRC_FILES := prebuilt/$(my_src_arch)/webview.apk
 
 LOCAL_PREBUILT_JNI_LIBS_arm := @lib/armeabi-v7a/libwebviewchromium.so
-
-LOCAL_OVERRIDES_PACKAGES := webview
 
 include $(BUILD_PREBUILT)
